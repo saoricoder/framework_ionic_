@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tu Viaje soñado
+      Destinos de viaje
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,71 +9,36 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Botones Interactivos</ion-title>
+      <ion-title size="large">Explora Destinos</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <!-- Contenedor de texto de ejemplo -->
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-
-  <!-- Contenedor de botones 
-  <div class="button-container">
-    <ion-button class="ripple-button" (click)="handleButtonClick('Button 1')">Click Me</ion-button>
-    <ion-button class="ripple-button" (click)="handleButtonClick('Button 2')">Another Button</ion-button>
-  </div>
--->
-
-<!--  Contenedor de tarjetas 
+  <!-- Contenedor de tarjetas de viaje -->
   <div class="card-container">
-    <div class="card ion-activatable ripple-parent" (click)="handleCardClick('Card 1')">
+    <div class="card ion-activatable ripple-parent" (click)="showImage('assets/paris.jpg')">
       <ion-ripple-effect></ion-ripple-effect>
-      <h2>Card Title</h2>
-      <p>Card content goes here.</p>
+      <h2>París</h2>
+      <p>La ciudad de la luz te espera con sus monumentos icónicos y su vibrante vida cultural.</p>
     </div>
-    <div class="card ion-activatable ripple-parent" (click)="handleCardClick('Card 2')">
+    <div class="card ion-activatable ripple-parent" (click)="showImage('assets/Tokio.jpg')">
       <ion-ripple-effect></ion-ripple-effect>
-      <h2>Another Card</h2>
-      <p>More content here.</p>
+      <h2>Tokio</h2>
+      <p>Sumérgete en la cultura única de Tokio, donde lo moderno se encuentra con lo tradicional.</p>
+    </div>
+    <div class="card ion-activatable ripple-parent" (click)="showImage('assets/nueva york.jpg')">
+      <ion-ripple-effect></ion-ripple-effect>
+      <h2>Nueva York</h2>
+      <p>Explora la gran manzana, famosa por sus rascacielos, Broadway y su diversa gastronomía.</p>
     </div>
   </div>
--->
 
-<div class="card-container">
-  <div class="card ion-activatable ripple-parent" (click)="handleCardClick('Paris')">
-    <ion-ripple-effect></ion-ripple-effect>
-    <h2>París</h2>
-    <p>La ciudad de la luz te espera con sus monumentos icónicos y su vibrante vida cultural.</p>
+  <!-- Sección para mostrar la imagen -->
+  <div class="image-overlay" *ngIf="selectedImage">
+    <div class="image-content">
+      <ion-button class="close-button" (click)="closeImage()">Cerrar</ion-button>
+      <img [src]="selectedImage" />
+    </div>
   </div>
-  <div class="card ion-activatable ripple-parent" (click)="handleCardClick('Tokio')">
-    <ion-ripple-effect></ion-ripple-effect>
-    <h2>Tokio</h2>
-    <p>Sumérgete en la cultura única de Tokio, donde lo moderno se encuentra con lo tradicional.</p>
-  </div>
-  <div class="card ion-activatable ripple-parent" (click)="handleCardClick('Nueva York')">
-    <ion-ripple-effect></ion-ripple-effect>
-    <h2>Nueva York</h2>
-    <p>Explora la gran manzana, famosa por sus rascacielos, Broadway y su diversa gastronomía.</p>
-  </div>
-</div>
 
-  <!-- Lista de elementos 
-  <ion-list>
-    <ion-item class="ion-activatable ripple-parent" (click)="handleItemClick('Item 1')">
-      <ion-ripple-effect></ion-ripple-effect>
-      <ion-label>Item 1</ion-label>
-    </ion-item>
-    <ion-item class="ion-activatable ripple-parent" (click)="handleItemClick('Item 2')">
-      <ion-ripple-effect></ion-ripple-effect>
-      <ion-label>Item 2</ion-label>
-    </ion-item>
-    <ion-item class="ion-activatable ripple-parent" (click)="handleItemClick('Item 3')">
-      <ion-ripple-effect></ion-ripple-effect>
-      <ion-label>Item 3</ion-label>
-    </ion-item>
-  </ion-list>
--->
 </ion-content>
 
