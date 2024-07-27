@@ -41,7 +41,7 @@
 }
 
 
-
+/*
 .card-container {
   display: flex;
   flex-direction: column;
@@ -60,8 +60,41 @@
 .card ion-ripple-effect {
   --ripple-color: rgba(0, 0, 0, 0.3);
 }
-
+*/
 
 ion-item {
   --ripple-color: rgba(0, 0, 0, 0.2);
+}
+/*Viajes*/
+/* Estilos para el contenedor de tarjetas */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Estilos para las tarjetas de destino */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.card p {
+  font-size: 1em;
+  color: #666;
 }
