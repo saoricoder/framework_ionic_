@@ -28,7 +28,14 @@ import {
 })
 export class HomePage {
   selectedImage: string | null = null;
-  constructor() {}
+  showSplash!: boolean;
+  
+  constructor() {
+    // Simula una carga inicial de 2 segundos antes de mostrar el contenido principal
+    setTimeout(() => {
+      this.showSplash = false;
+    }, 2000); // 2000 milisegundos = 2 segundos
+  }
 
   showImage(imageSrc: string) {
     this.selectedImage = imageSrc;
