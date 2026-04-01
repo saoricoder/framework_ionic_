@@ -1,3 +1,8 @@
+ion-content {
+  --background: black;
+  color: white;
+}
+
 /* Estilos para el contenedor de tarjetas */
 .card-container {
   display: flex;
@@ -8,27 +13,29 @@
 
 /* Estilos para las tarjetas de destino */
 .card {
-  background-color: white;
+  background-color: #333;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: white;
 }
 
 .card:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 8px rgba(255, 255, 255, 0.2);
 }
 
 .card h2 {
   margin-top: 0;
   font-size: 1.5em;
+  color: white;
 }
 
 .card p {
   font-size: 1em;
-  color: #666;
+  color: #ccc;
 }
 
 /* Estilos para la superposición de la imagen */
@@ -64,10 +71,11 @@
 }
 /* Estilos para el pie de página */
 ion-footer {
-  background-color: #f8f8f8;
-  border-top: 1px solid #ddd;
+  background-color: #222;
+  border-top: 1px solid #444;
   text-align: center;
   padding: 10px;
+  color: white;
 }
 
 ion-footer ion-toolbar {
@@ -76,5 +84,13 @@ ion-footer ion-toolbar {
 
 ion-footer ion-title {
   font-size: 14px;
-  color: #333;
+  color: #ccc;
+}
+
+/* Estilos para el título principal */
+.main-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+  color: white;
 }
